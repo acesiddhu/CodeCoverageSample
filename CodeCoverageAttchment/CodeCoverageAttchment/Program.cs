@@ -23,6 +23,13 @@ namespace CodeCoverageAttchment
             string projectName = args[2];
             string folder = args[3];
 
+            // Create test run
+            RunCreateModel runCreationModel = new RunCreateModel { BuildReference = new BuildConfiguration { Uri = buildurl } };
+            var testRun = testClient.CreateTestRunAsync(runCreationModel, projectName).Result;
+
+            //TestCaseResult result = new TestCaseResult { AutomatedTestName = "TestOne", AutomatedTestStorage = "foo.dll", Build = new ShallowReference { Url = buildurl},  }
+            //testClient.AddTestResultsToTestRunAsync()
+
             var testRuns = testClient.GetTestRunsAsync(projectName, buildurl).Result;
 
             foreach (var t in testRuns)
