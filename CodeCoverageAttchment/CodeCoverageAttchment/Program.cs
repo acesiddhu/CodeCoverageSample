@@ -24,7 +24,9 @@ namespace CodeCoverageAttchment
             string folder = args[3];
 
             // Create test run
-            RunCreateModel runCreationModel = new RunCreateModel("somename", buildId: int.Parse(args[5]), startedDate: DateTime.UtcNow.ToString(), completedDate: DateTime.UtcNow.ToString(), state: TestRunState.Completed.ToString());
+            RunCreateModel runCreationModel = new RunCreateModel("somename", buildId: int.Parse(args[5]),
+                startedDate: DateTime.UtcNow.ToString(), completedDate: DateTime.UtcNow.ToString(),
+                state: TestRunState.InProgress.ToString());
             var testRun = testClient.CreateTestRunAsync(runCreationModel, projectName).Result;
 
             //TestCaseResult result = new TestCaseResult { AutomatedTestName = "TestOne", AutomatedTestStorage = "foo.dll", Build = new ShallowReference { Url = buildurl},  }
