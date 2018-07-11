@@ -26,11 +26,15 @@ namespace CodeCoverageAttchment
             // Create test run
             RunCreateModel runCreationModel = new RunCreateModel("somename", buildId: int.Parse(args[5]),
                 startedDate: DateTime.UtcNow.ToString(), completedDate: DateTime.UtcNow.ToString(),
-                state: TestRunState.InProgress.ToString());
+                state: TestRunState.InProgress.ToString(), isAutomated: true);
             var testRun = testClient.CreateTestRunAsync(runCreationModel, projectName).Result;
 
-            //TestCaseResult result = new TestCaseResult { AutomatedTestName = "TestOne", AutomatedTestStorage = "foo.dll", Build = new ShallowReference { Url = buildurl},  }
-            //testClient.AddTestResultsToTestRunAsync()
+
+
+            TestCaseResult result = new TestCaseResult { AutomatedTestName = "TestOne", AutomatedTestStorage = "foo.dll",
+                Build = new ShallowReference { Url = buildurl }, TestCaseTitle = "TestOne" };
+            testClient.AddTestResultsToTestRunAsync(new TestCaseResult[] { result }, projectName, testRun.Id).Wait();
+            testClient.UpdateTestRunAsync(new RunUpdateModel("somename", state: TestRunState.Completed.ToString()), projectName, testRun.Id).Wait();
 
             var testRuns = testClient.GetTestRunsAsync(projectName, buildurl).Result;
 
