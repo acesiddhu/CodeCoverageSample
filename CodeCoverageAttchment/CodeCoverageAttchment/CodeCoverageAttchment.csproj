@@ -34,72 +34,51 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi">
-      <HintPath>..\..\..\..\..\..\TestSelector\TestSelector\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TeamFoundation.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.TeamFoundation.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TeamFoundation.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.TeamFoundation.Common.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.TeamFoundation.Core.WebApi, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+      <HintPath>sdk\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Task.TestExecution">
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.TeamFoundation.DistributedTask.Task.TestExecution.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Teamfoundation.DistributedTask.Task.TestResults">
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.Teamfoundation.DistributedTask.Task.TestResults.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TeamFoundation.Test.WebApi, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.TeamFoundation.TestClient.PublishTestResults, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.TeamFoundation.Test.WebApi.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TeamFoundation.TestClient.PublishTestResults">
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.TeamFoundation.TestClient.PublishTestResults.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TeamFoundation.TestImpact.WebApi">
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.TeamFoundation.TestImpact.WebApi.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TeamFoundation.TestManagement.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.TeamFoundation.TestManagement.Client.dll</HintPath>
+      <HintPath>sdk\Microsoft.TeamFoundation.TestClient.PublishTestResults.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.TestManagement.WebApi, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.TeamFoundation.TestManagement.WebApi.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TeamFoundation.TestPlatform.Client">
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.TeamFoundation.TestPlatform.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Services.Client.Interactive, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.VisualStudio.Services.Client.Interactive.dll</HintPath>
+      <HintPath>sdk\Microsoft.TeamFoundation.TestManagement.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Services.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+      <HintPath>sdk\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Tcm.WebApi">
+      <HintPath>sdk\Microsoft.VisualStudio.Services.Tcm.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.TestResults.WebApi">
+      <HintPath>sdk\Microsoft.VisualStudio.Services.TestResults.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Services.WebApi, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+      <HintPath>sdk\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=4.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\Newtonsoft.Json.dll</HintPath>
+      <HintPath>sdk\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage.DataMovement">
+      <HintPath>sdk\Microsoft.WindowsAzure.Storage.DataMovement.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>sdk\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.IO.Abstractions">
       <HintPath>..\..\..\..\..\..\TestAgent\modules\System.IO.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\TestAgent\modules\System.Net.Http.Formatting.dll</HintPath>
+      <HintPath>sdk\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
