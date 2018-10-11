@@ -25,8 +25,18 @@ namespace CodeCoverageAttchment
                 string projectName = args[2]; // $(SYSTEM.TEAMPROJECT)
                 string folder = args[3];
                 int buildId = int.Parse(args[5]); //$(Build.BuildId)
-                bool.TryParse(args[6], out bool useNewStore);
-                string projectId = args[7]; //$(System.TeamProjectId)
+                bool useNewStore = false;
+                string projectId = string.Empty;
+
+                try
+                {
+                    bool.TryParse(args[6], out useNewStore);
+                    projectId = args[7]; //$(System.TeamProjectId)
+                }
+                catch(Exception e)
+                {
+
+                }
 
                 // Create test run
                 RunCreateModel runCreationModel = new RunCreateModel("somename", buildId: buildId,
