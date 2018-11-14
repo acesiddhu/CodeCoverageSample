@@ -18,7 +18,7 @@ namespace CodeCoverageAttchment
             {
                 //System.Diagnostics.Debugger.Launch();
                 string collectionUrl = args[0]; // $(System.TeamFoundationCollectionUri)
-                var connection = new VssConnection(new Uri(collectionUrl), new Microsoft.VisualStudio.Services.OAuth.VssOAuthAccessTokenCredential(args[4]));
+                var connection = new VssConnection(new Uri(collectionUrl), new VssBasicCredential("user", args[4]));
 
                 var testClient = new TestManagementHttpClient(new Uri(collectionUrl), new VssBasicCredential("user", args[4]));
 
