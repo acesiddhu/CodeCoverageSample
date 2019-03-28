@@ -50,7 +50,7 @@ do
 {
     Start-Sleep -s 1
     $getRequest = Invoke-RestMethod -Uri $uri -Headers $authHeader -Method Get -ContentType 'application/json'
-} while ($getRequest.status -eq 'pending')
+} while ($getRequest.status -eq 'pending' -or $getRequest.status -eq 'inProgress')
 
 
 if($getRequest.status -ne 'completed') {
