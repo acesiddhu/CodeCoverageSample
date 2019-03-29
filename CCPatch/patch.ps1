@@ -32,6 +32,10 @@ if($patchResult.status -ne 'pending') {
 
 $getRequest = ''
 
+# Expected Status Values
+# 'pending' The coverage merge/evaluation is queued and hasnt started yet
+# 'inProgress' The coverage merge/evaluation is in progress
+# 'completed' The coverage merge/evaluation for the request client made is completed
 do
 {
     Start-Sleep -s 1
