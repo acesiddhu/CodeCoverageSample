@@ -5,6 +5,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Microsoft.TeamFoundation.TestClient.PublishTestResults;
 using Microsoft.TeamFoundation.TestManagement.WebApi;
+using Microsoft.VisualStudio.Services.Common;
 using Microsoft.VisualStudio.Services.WebApi;
 
 namespace CodeCoverageAttchment
@@ -17,9 +18,9 @@ namespace CodeCoverageAttchment
             {
                 //System.Diagnostics.Debugger.Launch();
                 string collectionUrl = args[0]; // $(System.TeamFoundationCollectionUri)
-                var connection = new VssConnection(new Uri(collectionUrl), new Microsoft.VisualStudio.Services.OAuth.VssOAuthAccessTokenCredential(args[4]));
+                var connection = new VssConnection(new Uri(collectionUrl), new VssBasicCredential("user", args[4]));
 
-                var testClient = new TestManagementHttpClient(new Uri(collectionUrl), new Microsoft.VisualStudio.Services.OAuth.VssOAuthAccessTokenCredential(args[4]));
+                var testClient = new TestManagementHttpClient(new Uri(collectionUrl), new VssBasicCredential("user", args[4]));
 
                 string buildurl = args[1]; // $(BUILD.BUILDURI)
                 string projectName = args[2]; // $(SYSTEM.TEAMPROJECT)
